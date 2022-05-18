@@ -4,13 +4,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ciandt.listadecontatos.data.model.ContactInfo
 import com.ciandt.listadecontatos.databinding.ItemListBinding
 
-class ListViewHolder(binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root) {
+class ListViewHolder(binding: ItemListBinding):RecyclerView.ViewHolder(binding.root) {
 
-    private val name = binding.nameContact
-    private val phone = binding.phoneContact
+    private var name = binding.nameContact
+    private var contact = binding.phoneContact
 
-    fun bindingView(contact:ContactInfo){
-        name.text = contact.name
-        phone.text = contact.phone
+    fun bindingView(contactInfo: ContactInfo){
+        name.text = contactInfo.name
+        contact.text = contactInfo.phone
     }
+
 }
