@@ -8,10 +8,12 @@ class ListViewHolder(binding: ItemListBinding):RecyclerView.ViewHolder(binding.r
 
     private var name = binding.nameContact
     private var contact = binding.phoneContact
+    private var nameId = binding.idName
 
     fun bindingView(contactInfo: ContactInfo){
         name.text = contactInfo.name
         contact.text = contactInfo.phone
+        nameId.text = contactInfo.name[0].toString()
     }
 
 }
